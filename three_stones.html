@@ -23,8 +23,13 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="raising_hell.html">Raising Hell</a></li>
 					<li><a href="about.html">About</a></li>
+					<li><a href="raising_hell.html">Raising Hell</a></li>
+					<li><a href="pokemon_tcg.html">Pokemon Card Game</a></li>
+					<li><a href="phong_model.html">Phong Model Illumination</a></li>
+					<li><a href="tetris.html">Tetris</a></li>
+					<li><a href="solomons_key.html">Solomon's Key</a></li>
+					<li><a href="three_stones.html">Three Stones</a></li>					
 				</ul>
 			</nav>
 
@@ -42,10 +47,12 @@
 			<section id="two" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
-						<div class="content">						
+						<div class="content">		
+						<div class="game-image">				
 							<div class="image fit">
 								<img src="images/3_stones_menu.jpg" alt="" />
 							</div>
+						</div>
 							<header class="align-center">
 								<p>Networking</p>
 								<h2>Three Stones</h2>
@@ -56,10 +63,11 @@
 							</p>
 
 							<h2>Networking</h2>  
-							<p>The first step is connecting the two players together. At the beginning you need a host to act as the server of the game by launching the server application. The server will automatically host the game using localhost. The client then connects to the game using the server’s IP address.
-							Once the two players are connected to the game they communicate to each other by exchanging an array of bytes. The first byte is reserved for the instruction, such as a move command or a notification that the game is over. The following bytes were used in our move command to send the row and column of the move.
-							Once all a player’s stones have been placed a game over instruction will be sent, the winner will be calculated and the winner will display on the screen. The players can then reconnect for a rematch. 
-							</p>														 
+							<p>The first step is connecting the two players together. At the beginning you need a host to act as the server of the game by launching the server application. The server will automatically host the game using localhost. The client then connects to the game using the server’s IP address.</p>
+
+							<p>Once the two players are connected to the game they communicate to each other by exchanging an array of bytes. The first byte is reserved for the instruction, such as a move command or a notification that the game is over. The following bytes were used in our move command to send the row and column of the move.</p>
+
+							<p>Once all a player’s stones have been placed a game over instruction will be sent, the winner will be calculated and the winner will display on the screen. The players can then reconnect for a rematch.</p>														 
 						</div>
 					</div>
 				</div>
