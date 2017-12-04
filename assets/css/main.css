@@ -1810,7 +1810,6 @@
 		display: block;
 		margin: 0 auto;
 		border: 0;
-		margin-bottom: 2cm;
 	}
 
 /* Box */
@@ -4323,4 +4322,5 @@
 .video{
 	text-align: center;
 	width: 100%;
+	margin-bottom: 15px;
 }
