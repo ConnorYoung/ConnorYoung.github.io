@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Connor Young</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Connor Young</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="raising_hell.html">Raising Hell</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>XNA</p>
+						<h2>Tetris</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">						
+						<div class="video">
+						<iframe class="align-center" width="600" height="400"
+							src="https://www.youtube.com/embed/F3LQyszMieM">
+						 </iframe> 
+						</div>
+							<header class="align-center">
+								<p>XNA</p>
+								<h2>Tetris</h2>
+							</header>
+
+						<div>
+							<p>One of the college projects I worked on was replicating the game Tetris in C# using the XNA game framework. The goal of the project was to practice design using entity relationship diagrams and put the observer pattern to use.
+							</p>
+
+							<h2>Rotation</h2>  
+							<p>Rotation was the trickiest part of the Tetris project. But once the proper architecture is in place it’s as easy as following a formula. Each Tetris shape such as the L could be represented as a series of 		blocks. Each shape would have the series of blocks represented in a different way at the origin point. If you want to check if you can rotate then we just have to add the blocks current position to the origin 	of all the blocks in the shape and check for bounds or if a color is there. 
+								Once the checking’s done we just apply the formula
+								newPosition.X = origin.Position.X – origin.Position.Y + currentPosition.Y
+								newPosition.Y = origin.Position.X + origin.Position.Y - currentPosition.X
+							</p>
+							
+							<h2>Observer Pattern</h2> 
+							<p>The observer pattern was useful in this project for things like notifying the score to increase only when a line of blocks has been cleared. The observer pattern was applied using C#’s events and delegates.
+								For example every time a line is cleared the board can call an event called incrementLines which would update the score. However, the actual implementation of the event would be inside the score class so that the board doesn’t have to worry about keeping track of the score. 
+								So all the score class has to do is subscribe to the board by attaching its incrementLines event and then the board will notify the score class any time the score needs to change.	
+						    </p>							 
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
