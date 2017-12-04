@@ -1808,6 +1808,8 @@
 	iframe{
 		align: middle;
 		display: block;
+		margin: 0 auto;
+		border: 0;
 	}
 
 /* Box */
