@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Connor Young</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Connor Young</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="raising_hell.html">Raising Hell</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Software Engineering</p>
+						<h2>Pokemon Card Game</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">						
+						<div class="video">
+						<iframe class="align-center" width="600" height="400"
+							src="https://www.youtube.com/embed/F3LQyszMieM">
+						 </iframe> 
+						</div>
+							<header class="align-center">
+								<p>Game Development</p>
+								<h2>Raising Hell</h2>
+							</header>
+
+						<div>
+							<p>The Pokemon Card Game is a software engineering project I had worked on in a group of eight. The goal of the project was to replicate the Pokemon card game while using agile development and best practices.
+								My main responsibility during this project was to create the user interface, write the controller code, develop an AI and write classes to direct the flow of the game. Our group of eight was split up into specialized groups and I worked closely with my partner Akash Patel to get our project looking good and working. 
+							</p>
+
+							<h2>User Interface</h2>  
+							<p>The user interface was written using Java FX and made it easy to follow the layout used in the Pokemon trading card game and handle events. 
+								The most challenging part of the UI was managing all of the detail panels. Since the cards are small you can’t see a pokemon’s  abilities that well and there are no counters for keeping track of damage. So I had made popup windows for viewing the details of a Pokemon. These pop-up windows also came in handy when card selections were needed so that the user could scroll through their selections.  
+								I followed the MVC pattern when designing the UI. Java FX kept the view part separate by storing the interface in separate fxml files.The controller was the more interesting part since we were working in such a large group. My group members would hide a lot of the functionality of their classes so I could call simple methods like attack and hurt.  
+							</p>
+							
+							<h2>Agile Development</h2> 
+							<p>Our group followed agile development with meetups at least once every week lead by our scrum leader Miqdad Amirali. During our meetings we would have a standup to discuss what we’ve done up until the meeting. We would then set up our next sprint of upcoming tasks and setup a project backlog on Trello to keep track of what needed to be done. 
+							When we would set up the tasks to be done for the upcoming sprint, the tasks would be set up as use cases. The use cases would be things that our consumer wanted inside the game. For example, the task of a pokemon attacking, spending energy and having its sub abilities applied would be titled as a simple attack use case.
+						    </p>
+
+						    <h2>Architecture</h2> 
+							<p>Our architecture followed the 4+1 architectural model which consisted of: the logical, implementation, data and development views.</p>
+
+							<ul>
+							  <li>The logical view focuses on the desired results expected of the program from the end user. The process to get a pokemon game running was a cycle of our controller calling functions from the model and displaying it to the UI.
+							  </li>
+							  <li>The implementation view is the part we mainly focused on as programmers which is where the coding details come in. A particularly high risk area was our Pokemon ability parser. All abilities had to be dynamically parsed from a text file provided by our teacher and without it we wouldn’t know what our attacks did. The parsing also filled in the attributes for each Pokemon such as how much health it had so we could have a single Pokemon class.
+							  </li>
+							  <li>The data view was simple for us since the only external file we used was the few text files we needed to parse abilities and attributes from.</li>
+							  <li>The development view is how we as developers interacted with each other to complete the project. We talked with each other using slack, set up our back log using trello and used Git for version control.</li>
+							</ul> 
+							 
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
