@@ -75,8 +75,9 @@
 							  <li>Balance: boids try to keep the same velocity</li>
 							</ul> 
 
-							<p>However this approach did not work very well for our game because the boids would roam around aimlessly, while our units had to either follow the player or patrol around the map. Later into the project we gained a new group member Pierre Andre Leger who took on the task of restructuring the flocking algorithm.
+							<p>However this approach did not work very well for our game because the boids would roam around aimlessly, while our units had to either follow the player or patrol around the map. Later into the project we gained a new group member Pierre Andre Leger who took on the task of restructuring the flocking algorithm.</p>
 
+							<p>
 							The new flocking algorithm replaced the center of mass with a new attractor. The attractor would have a high weight so that the units would move towards it. The player would control his own attractor using the right analog stick of an Xbox controller to give some control over army positioning. Allied units would also ignore the attractor when attacking an enemy unit instead heading directly after it. These modifications made local avoidance difficult to calculate and we needed to use colliders on our units for repulsion.
 							 </p>
 						</div>
