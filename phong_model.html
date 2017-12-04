@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Connor Young</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Connor Young</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="raising_hell.html">Raising Hell</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Computer Graphics</p>
+						<h2>Phong Model Illumination</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">						
+							<div class="image fit">
+								<img src="images/3_stones_menu.jpg" alt="" />
+							</div>
+							<header class="align-center">
+								<p>Computer Graphics</p>
+								<h2>Phong Model Illumination</h2>
+							</header>
+
+						<div>
+							<p>
+								One of the projects in Concordia’s computer graphics class was to read data from a file and render shapes on the screen using ray casting and the Phong illumination model. To display the images I used OpenGL and the CImg library to help process the images.
+							</p>
+
+							<h2>Phong Illumination Model</h2>  
+							<p>
+								The Phong Illumination Model doesn’t exactly simulate lighting in real life, but it is efficient and looks close enough that it is a very popular model used to render pixels.  In order to get the resulting color of the pixel, three colors are added together: the ambient, diffuse and specular color.
+							</p>
+							
+							 <ul>
+							  <li>Diffuse color: the defining color of the object under plain white light.</li>
+							  <li>Specular color: The highlights of an object, shiny surfaces have a high specular value.</li>
+							  <li>Ambient color: lighting of the scene independent of any light sources.</li>
+							</ul> 
+
+							<p>
+								In this project the diffuse, specular and ambient color of the shape was given in the text file I parsed. However, the color of the pixel to be displayed is also changed by its environment. If a sphere has an object above it then the pixels of the sphere will be a shade darker because they’re in shadow. To compute the color I used ray casting. 
+							 </p>		
+
+							<h2>Ray Casting</h2>  
+							<p>
+								The color of an object relies on light, without light the object wouldn’t be visible. Normally a light would cast out a massive amount of rays lighting any object they intersect with. However, this is really impractical for an application because the rays would miss a lot of objects hitting nothing and wasting computation time. Instead rays are cast out from the camera that we view the scene with. Once a ray intersects with a point we calculate the normal at that point, shoot a shadow ray to see if a shadow is cast onto the object and if it’s unobstructed then we apply the Phong model to it and get a color for the pixel. 
+							</p>
+							<p>
+								The tricky part was finding out whether or not our ray intersected with an object at a given point because the formula for intersection varies between spheres, planes and triangles.  For example when rays are cast on a sphere we can use the sphere’s center and radius to find out if it intersects. However, intersection with a triangle is more work because the normal at the vertices can be calculated, but in the middle you need to change the coordinate scheme to barycentric coordinates for linear interpolation between the points.
+
+							</p>											 
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
