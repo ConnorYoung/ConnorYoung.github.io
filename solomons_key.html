@@ -32,8 +32,8 @@
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>Game Development</p>
-						<h2>Raising Hell</h2>
+						<p>C#</p>
+						<h2>Solomon's Key</h2>
 					</header>
 				</div>
 			</section>
@@ -44,34 +44,26 @@
 					<div class="box">
 						<div class="content">						
 						<div class="video">
-						<iframe class="align-center" width="600" height="400"
-							src="https://www.youtube.com/embed/F3LQyszMieM">
-						 </iframe> 
+							<div class="image fit">
+								<img src="images/project_3.jpg" alt="" />
+							</div>		
 						</div>
 							<header class="align-center">
-								<p>Game Development</p>
-								<h2>Raising Hell</h2>
+								<p>C#</p>
+								<h2>Solomon's Key</h2>
 							</header>
 
 						<div>
-							<p>Raising Hell is the final project that I worked on in a group of five for Concordia's Introduction to Game Development class. In Raising Hell you play as a ghost who resurrects the souls of lost knights to gain an army strong enough to defeat a powerful boss.</p>
+							<p>Solomon’s key was the first game I’ve ever worked on and it was written while I was taking the introduction to C# course at Dawson College.
 
-							<h2>Animation</h2>  
-							<p>My main focus for the project was working on the animation for all the different units and abilities. Unity made setting up and assigning the animations very straightforward and saved a lot of tedious work. Since most of the animations were across many units they could use the same controller for states like idle, moving and attacking. Unity’s triggers also made it easy to transition between continuous and one-time states. If a unit ever needed to attack it would set off the attack trigger and once the attack was finished the unit would go back to idling.
-							When a unit needed to transition between states it would use an attached AnimationManager script. I created the script to keep the animation transitions as encapsulated as possible. If a unit had a velocity then the script would trigger the knight’s moving animation.
-							</p>
-							
-							<h2>Flocking</h2> 
-							<p>I had worked on an early prototype of the flocking algorithm which followed the Boid algorithm closely. The Boid alghorithm focused on:</p>
-							 <ul>
-							  <li>Local avoidance: boids try to move away from each other</li>
-							  <li>Center mass: boids always try to move to the center of mass</li>
-							  <li>Balance: boids try to keep the same velocity</li>
-							</ul> 
+								The goal of the project was to replicate the game Solomon’s key in C# using windows forms. I decided to design the character using Samus’ sprites from the game Metroid. 
 
-							<p>However this approach did not work very well for our game because the boids would roam around aimlessly, while our units had to either follow the player or patrol around the map. Later into the project we gained a new group member Pierre Andre Leger who took on the task of restructuring the flocking algorithm.
+								The player can create or destroy cubes to the bottom diagonal that they’re facing. If there are no cubes adjacent to a cube then it will fall down and kill any enemies below it. Cubes can also be pushed to damage enemies as well. Once all the enemies are defeated you've won the game. 
 
-							The new flocking algorithm replaced the center of mass with a new attractor. The attractor would have a high weight so that the units would move towards it. The player would control his own attractor using the right analog stick of an Xbox controller to give some control over army positioning. Allied units would also ignore the attractor when attacking an enemy unit instead heading directly after it. These modifications made local avoidance difficult to calculate and we needed to use colliders on our units for repulsion.
+								The game also featured saving and loading by writing to a file. It was simple to do in a game like this since the board is composed of tiles which are easily stored in an array. 
+
+								I really enjoyed working on this project because it was my first time animating sprites and getting a character to do what I programmed. It sparked my interest in creating games and I haven’t turned back since. 
+
 							 </p>
 						</div>
 					</div>
