@@ -29,8 +29,8 @@
 					<li><a href="phong_model.html">Phong Model Illumination</a></li>
 					<li><a href="tetris.html">Tetris</a></li>
 					<li><a href="solomons_key.html">Solomon's Key</a></li>
-					<li><a href="three_stones.html">Three Stones</a></li>		
-					<li><a href="credits.html">Credits</a></li>						
+					<li><a href="three_stones.html">Three Stones</a></li>	
+					<li><a href="credits.html">Credits</a></li>							
 				</ul>
 			</nav>
 
@@ -38,8 +38,8 @@
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>XNA</p>
-						<h2>Tetris</h2>
+						<!-- <p>Student Developer</p> -->
+						<h2>Credits</h2>
 					</header>
 				</div>
 			</section>
@@ -48,35 +48,31 @@
 			<section id="two" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
-						<div class="content">
-							<div class="game-image">
-								<div class="image fit">
-									<img src="images/project_1.jpg" alt="" />
-								</div>						
-							</div>
-							<header class="align-center">
-								<p>XNA</p>
-								<h2>Tetris</h2>
+						<div class="content">						
+							<header class="align-center">								
+								<h2>Credits</h2>
 							</header>
 
 						<div>
-							<p>One of the college projects I worked on was replicating the game Tetris in C# using the XNA game framework. The goal of the project was to practice design using entity relationship diagrams and put the observer pattern to use.
+							<p>Most of the projects I’ve worked on have been in groups and I have to give thanks to all the partners, programmers and friends who have been a part of the experience. 
 							</p>
-
-							<h2>Rotation</h2>  
-							<p>Rotation was the trickiest part of the Tetris project. But once the proper architecture is in place it’s as easy as following a formula. Each Tetris shape such as the L could be represented as a series of 		blocks. Each shape would have the series of blocks represented in a different way at the origin point. If you want to check if you can rotate then we just have to add the blocks current position to the origin 	of all the blocks in the shape and check for bounds or if a color is there. 
-
-								Once the checking’s done we just apply the formula
-
-								newPosition.X = origin.Position.X – origin.Position.Y + currentPosition.Y
-								newPosition.Y = origin.Position.X + origin.Position.Y - currentPosition.X
-							</p>
+							<h2>Raising Hell</h2>
+							<p>	Group members: Xavier Morissette, Akash Patel, Patrick Nicolle, Pierre Andre Leger and Connor Young.</p>							
+							<p>All of the art was used from online resources, the youtube video on the raising hell has links to all the resources that we have used.</p>
 							
-							<h2>Observer Pattern</h2> 
-							<p>The observer pattern was useful in this project for things like notifying the score to increase only when a line of blocks has been cleared. The observer pattern was applied using C#’s events and delegates.
-								For example every time a line is cleared the board can call an event called incrementLines which would update the score. However, the actual implementation of the event would be inside the score class so that the board doesn’t have to worry about keeping track of the score. 
-								So all the score class has to do is subscribe to the board by attaching its incrementLines event and then the board will notify the score class any time the score needs to change.	
-						    </p>							 
+							<h2>Pokemon Card Game</h2>
+							<p>	Group Members:  Miqdad Amirali, Alex Genio, George Grafos, Sophia Kavousifard, Xavier Morissette, Patrick Nicoll, Akash Patel and Connor Young</p>					
+							<p>All the art used in this game belongs to the Pokemon Trading Card game.</p>
+
+							<h2>Tetris</h2>
+							<p>	Group members: Richard Neeson, Shabeer Sher, Connor Young</p>
+
+							<h2>Three Stones</h2>
+							<p>	Group Members: Patrick Nicoll, Michelle Polisena Petrelli, Connor Young</p>	
+
+							<h2>Website</h2>
+							<p>	This website is based off the Hielo template at template.co</p>						
+
 						</div>
 					</div>
 				</div>
