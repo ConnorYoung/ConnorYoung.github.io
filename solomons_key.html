@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Connor Young</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Connor Young</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="raising_hell.html">Raising Hell</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>Game Development</p>
+						<h2>Raising Hell</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">						
+						<div class="video">
+						<iframe class="align-center" width="600" height="400"
+							src="https://www.youtube.com/embed/F3LQyszMieM">
+						 </iframe> 
+						</div>
+							<header class="align-center">
+								<p>Game Development</p>
+								<h2>Raising Hell</h2>
+							</header>
+
+						<div>
+							<p>Raising Hell is the final project that I worked on in a group of five for Concordia's Introduction to Game Development class. In Raising Hell you play as a ghost who resurrects the souls of lost knights to gain an army strong enough to defeat a powerful boss.</p>
+
+							<h2>Animation</h2>  
+							<p>My main focus for the project was working on the animation for all the different units and abilities. Unity made setting up and assigning the animations very straightforward and saved a lot of tedious work. Since most of the animations were across many units they could use the same controller for states like idle, moving and attacking. Unity’s triggers also made it easy to transition between continuous and one-time states. If a unit ever needed to attack it would set off the attack trigger and once the attack was finished the unit would go back to idling.
+							When a unit needed to transition between states it would use an attached AnimationManager script. I created the script to keep the animation transitions as encapsulated as possible. If a unit had a velocity then the script would trigger the knight’s moving animation.
+							</p>
+							
+							<h2>Flocking</h2> 
+							<p>I had worked on an early prototype of the flocking algorithm which followed the Boid algorithm closely. The Boid alghorithm focused on:</p>
+							 <ul>
+							  <li>Local avoidance: boids try to move away from each other</li>
+							  <li>Center mass: boids always try to move to the center of mass</li>
+							  <li>Balance: boids try to keep the same velocity</li>
+							</ul> 
+
+							<p>However this approach did not work very well for our game because the boids would roam around aimlessly, while our units had to either follow the player or patrol around the map. Later into the project we gained a new group member Pierre Andre Leger who took on the task of restructuring the flocking algorithm.
+
+							The new flocking algorithm replaced the center of mass with a new attractor. The attractor would have a high weight so that the units would move towards it. The player would control his own attractor using the right analog stick of an Xbox controller to give some control over army positioning. Allied units would also ignore the attractor when attacking an enemy unit instead heading directly after it. These modifications made local avoidance difficult to calculate and we needed to use colliders on our units for repulsion.
+							 </p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
